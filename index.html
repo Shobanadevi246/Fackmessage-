@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fake Message Detection</title>
+ <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <div class="site" role="main">
+    <!-- PAGE 1: Welcome -->
+    <header id="welcomePage">
+      <h1>Fake Message Detection</h1>
+      <p class="lead">Protect yourself from fake messages, scams, phishing, hacking attempts and malicious links.</p>
+    </header>
+
+    <div class="columns" id="introColumns">
+      <div class="card">
+        <div class="small-title">What is this site?</div>
+        <div class="muted">
+          This tool helps you quickly check text messages or chat content for signs of scams. We look for suspicious keywords, dangerous links, urgent requests (like OTP or password), and QR / fake link warnings — then give a simple Safe or Unsafe result.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="small-title">Why use it?</div>
+        <div class="muted">
+          Scammers often use urgency, fake bank alerts, rewards or shortened links. This site gives an instant first check so you can avoid clicking or sharing sensitive data.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="small-title">Quick features</div>
+        <div class="muted">
+          • Offline single-file tool (no upload) • Shows triggered words • Color-coded result (Red = Unsafe, Green = Safe)
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:0 28px 22px; display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+      <a class="start-link" id="goToDetector">Click here to find fake or not →</a>
+      <div style="color:var(--muted); font-size:14px;">(Click and paste the suspicious message on the next page)</div>
+    </div>
+
+    <!-- PAGE 2: Detector (hidden initially) -->
+    <section id="detectorPage" aria-hidden="true">
+      <div style="display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap;">
+        <div style="flex:1 1 480px; min-width:280px;">
+          <div class="card">
+            <div class="small-title">Paste the suspicious message here</div>
+            <textarea id="msgInput" placeholder="Paste SMS, WhatsApp text, or email content..."></textarea>
+
+            <div class="controls">
+              <button class="btn btn-check" id="checkBtn">Check Message</button>
+              <button class="btn btn-back" id="backBtn">← Back to Welcome</button>
+            </div>
+
+            <div id="outputArea" style="display:none">
+              <div id="resultBox" class="result"></div>
+              <div class="details" id="explainArea"></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex:0 0 280px; min-width:220px;">
+          <div class="card">
+            <div class="small-title">What we look for</div>
+            <div class="muted">
+              • Urgent requests for OTP, password, or transfers.<br>
+              • Promises of money, gifts, lottery or refund.<br>
+              • Suspicious links (shortened/unknown domains) or QR link warnings.<br>
+              • Requests to verify account details or to click a link to 'fix' a problem.
+            </div>
+            <div style="margin-top:12px;">
+              <div class="small-title">Tip</div>
+              <div class="muted">If unsure, do not click the link. Check with the official service or bank using their verified contact channels.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>Made with care • Offline demo • Keep your personal data safe</footer>
+  </div>
+  
+</body>
+</html>
+<script src="script.js"></script>
